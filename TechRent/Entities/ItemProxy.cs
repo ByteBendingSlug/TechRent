@@ -37,6 +37,8 @@ namespace TechRent.Entities
             _items = new List<Item>();
         }
 
+        public Item? GetItem(Guid id) => (_items.FirstOrDefault(y => y.Id == id) is Item item) ? item : null;
+
         public async Task Load()
         {
             IEnumerable<Item> items = await _fetchItems.Execute();
@@ -86,7 +88,7 @@ namespace TechRent.Entities
             ItemDeleted?.Invoke(id);
         }
 
-        public void Clear()
+        public void ClearItems()
         {
             _items.Clear();
         }
