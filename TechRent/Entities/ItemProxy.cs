@@ -41,7 +41,7 @@ namespace TechRent.Entities
 
         public async Task Load()
         {
-            IEnumerable<Item> items = await _fetchItems.Execute();
+            var items = await _fetchItems.Execute();
 
             _items.Clear();
             _items.AddRange(items);
@@ -86,11 +86,6 @@ namespace TechRent.Entities
             _items.RemoveAll(y => y.Id == id);
 
             ItemDeleted?.Invoke(id);
-        }
-
-        public void ClearItems()
-        {
-            _items.Clear();
         }
     }
 }

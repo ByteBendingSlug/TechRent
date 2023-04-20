@@ -21,7 +21,7 @@ namespace TechRent.Features.RentItem
         
         public override async Task ExecuteAsync(object? parameter)
         {
-            ItemDetailsFormViewModel formViewModel = _rentItemViewModel.ItemDetailsFormViewModel;
+            var formViewModel = _rentItemViewModel.ItemDetailsFormViewModel;
 
             formViewModel.IsSubmitting = true;
 

@@ -26,7 +26,7 @@ namespace TechRent.Features.AddItem
 
         public override async Task ExecuteAsync(object? parameter)
         {
-            ItemDetailsFormViewModel itemDetailsFormViewModel = _addItemViewModel.ItemDetailsFormViewModel;
+            var itemDetailsFormViewModel = _addItemViewModel.ItemDetailsFormViewModel;
 
             itemDetailsFormViewModel.IsSubmitting = true;
 

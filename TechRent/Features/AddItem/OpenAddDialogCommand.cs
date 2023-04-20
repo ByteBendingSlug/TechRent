@@ -16,7 +16,7 @@ namespace TechRent.Features.AddItem
 
         public override void Execute(object? parameter)
         {
-            AddItemViewModel addItemViewModel = new AddItemViewModel(_itemProxy, _dialogNavigationProxy);
+            var addItemViewModel = new AddItemViewModel(_itemProxy, _dialogNavigationProxy);
             _dialogNavigationProxy.CurrentViewModel = addItemViewModel!;
         }
     }

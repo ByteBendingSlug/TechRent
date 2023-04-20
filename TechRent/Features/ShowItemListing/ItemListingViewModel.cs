@@ -20,14 +20,8 @@ namespace TechRent.Features.ShowItemListing
 
         public ItemListingElementViewModel? SelectedItemElementViewModel
         {
-            get
-            {
-                return _itemListingElementViewModels.FirstOrDefault(y => y.Item?.Id == _selectedItemProxy.SelectedItem?.Id) ?? _itemListingElementViewModels.FirstOrDefault();
-            }
-            set
-            {
-                _selectedItemProxy.SelectedItem = value?.Item;
-            }
+            get => _itemListingElementViewModels.FirstOrDefault(y => y.Item?.Id == _selectedItemProxy.SelectedItem?.Id) ?? _itemListingElementViewModels.FirstOrDefault();
+            set => _selectedItemProxy.SelectedItem = value?.Item;
         }
 
         public ItemListingViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationStore)

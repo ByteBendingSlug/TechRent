@@ -56,6 +56,8 @@ namespace TechRent.Features.ShowItemDetail
         }
 
         public bool CanSubmit => !string.IsNullOrEmpty(ItemName);
+
+        // TODO: Delete button should only be visible if the item is not rented
         public bool CanDelete => !IsRented;
 
         public ICommand SubmitCommand { get; }

@@ -12,10 +12,7 @@ namespace TechRent.Features.Navigation
         private ViewModelBase? _currentViewModel;
         public ViewModelBase? CurrentViewModel
         {
-            get
-            {
-                return _currentViewModel;
-            }
+            get => _currentViewModel;
             set
             {
                 _currentViewModel = value;

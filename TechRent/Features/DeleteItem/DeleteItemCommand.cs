@@ -20,7 +20,7 @@ namespace TechRent.Features.DeleteItem
 
         public override async Task ExecuteAsync(object? parameter)
         {
-            Item item = _itemListingElementViewModel.Item;
+            var item = _itemListingElementViewModel.Item;
             _itemListingElementViewModel.IsDeleting = true;
             try
             {

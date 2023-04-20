@@ -9,10 +9,7 @@ namespace TechRent.Entities
         private Item? _selectedItem;
         public Item? SelectedItem
         {
-            get
-            {
-                return _selectedItem;
-            }
+            get => _selectedItem;
             set
             {
                 _selectedItem = value;
