@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TechRent.Views.Components
+namespace TechRent.Shared.Views.Components
 {
     /// <summary>
     /// Interaktionslogik für ItemDetailsView.xaml

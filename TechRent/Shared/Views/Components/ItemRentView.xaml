@@ -1,12 +1,10 @@
-﻿<UserControl x:Class="TechRent.Views.Components.ItemDetailsViewForm"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:TechRent.Views"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800">
-
+﻿<UserControl x:Class="TechRent.Shared.Views.Components.ItemRentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TechRent.Shared.Views.Components"
+             mc:Ignorable="d" Height="220" Width="430">
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </UserControl.Resources>
@@ -24,24 +22,9 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
-                    <ColumnDefinition Width="*" MaxWidth="250" />
-                </Grid.ColumnDefinitions>
 
-                <TextBlock
-                    Grid.Column="0"
-                    FontWeight="Bold"
-                    Text="Itemname" />
 
-                <TextBox
-                    Grid.Column="1"
-                    Margin="20,0,0,0"
-                    Text="{Binding ItemName}" />
-            </Grid>
-
-            <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid Grid.Row="2" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
                     <ColumnDefinition Width="auto" />
@@ -50,17 +33,18 @@
                 <TextBlock
                     Grid.Column="0"
                     FontWeight="Bold"
-                    Text="Kategorie" />
+                    ><Run Text="Rent"/><Run Language="de-de" Text=" this item?"/></TextBlock>
 
-                <ComboBox Grid.Column="1"
-                          Margin="20,0,0,0"
-                          Text="{Binding Category}"
-                          SelectedIndex="0">
-                    <ComboBoxItem>Smartphone</ComboBoxItem>
-                    <ComboBoxItem>Notebook</ComboBoxItem>
-                </ComboBox>
+                <CheckBox
+                    Grid.Column="1"
+                    Margin="20,0,0,0"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsRented}" />
             </Grid>
+
         </Grid>
+
+
 
         <WrapPanel Grid.Row="1" Margin="0,30,0,0">
             <Button
@@ -74,5 +58,6 @@
                 Command="{Binding CancelCommand}"
                 Content="Cancel" />
         </WrapPanel>
+
     </Grid>
 </UserControl>

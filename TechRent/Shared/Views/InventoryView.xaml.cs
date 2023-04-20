@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TechRent.Views
+namespace TechRent.Shared.Views
 {
     /// <summary>
     /// Interaktionslogik für InventoryView.xaml

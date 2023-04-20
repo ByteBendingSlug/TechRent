@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TechRent.Views.Components
+namespace TechRent.Shared.Views.Components
 {
     /// <summary>
     /// Interaktionslogik für ItemRentView.xaml

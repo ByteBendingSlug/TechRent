@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TechRent.Features.ShowItemListing;
 
-namespace TechRent.Views.Components
+namespace TechRent.Shared.Views.Components
 {
     /// <summary>
     /// Interaktionslogik für ItemListingView.xaml

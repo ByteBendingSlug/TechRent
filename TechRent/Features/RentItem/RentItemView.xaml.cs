@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace TechRent.Views
+namespace TechRent.Features.RentItem
 {
     /// <summary>
     /// Interaktionslogik für RentItemView.xaml
