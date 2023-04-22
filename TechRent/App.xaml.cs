@@ -10,7 +10,6 @@ using TechRent.Features.DeleteItem;
 using TechRent.Features.Navigation;
 using TechRent.Features.UpdateItem;
 using TechRent.Shared.DatabaseContext;
-using TechRent.Shared.Queries;
 using TechRent.Shared.ViewModels;
 
 namespace TechRent

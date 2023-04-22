@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechRent.Shared.FeatureContracts;
-using TechRent.Shared.Queries;
 
 namespace TechRent.Entities
 {
