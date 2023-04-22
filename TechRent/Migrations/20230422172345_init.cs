@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TechRent.Migrations
 {
     /// <inheritdoc />
-    public partial class MyMigration : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace TechRent.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     ItemName = table.Column<string>(type: "TEXT", nullable: true),
-                    Kategorie = table.Column<string>(type: "TEXT", nullable: true),
-                    Ausleihen = table.Column<bool>(type: "INTEGER", nullable: false)
+                    Category = table.Column<string>(type: "TEXT", nullable: true),
+                    Rent = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

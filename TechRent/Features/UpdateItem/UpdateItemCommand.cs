@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TechRent.Entities;
 using TechRent.Shared.DatabaseContext;
 using TechRent.Shared.DTOs;
@@ -27,8 +23,8 @@ namespace TechRent.Features.UpdateItem
                 {
                     Id = item.Id,
                     ItemName = item.ItemName,
-                    Kategorie = item.Category,
-                    Ausleihen = item.Rent,
+                    Category = item.Category,
+                    Rent = item.Rent,
                 };
 
                 context.Items.Update(itemDTO);

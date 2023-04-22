@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace TechRent.Shared.Commands
 {
@@ -11,7 +7,7 @@ namespace TechRent.Shared.Commands
         private bool _isExecuting;
         public bool IsExecuting
         {
-            get => _isExecuting;    
+            get => _isExecuting;
             set
             {
                 _isExecuting = value;

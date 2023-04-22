@@ -78,7 +78,7 @@ namespace TechRent
 
             services.AddSingleton(new DialogNavigationProxy());
             services.AddScoped<InventoryViewModel>(CreateInventoryViewModel);
-            services.AddSingleton<MainWindowViewModel>();
+            services.AddTransient<MainWindowViewModel>();
             services.AddSingleton<MainWindow>((services) => new MainWindow()
             {
                 DataContext = services.GetRequiredService<MainWindowViewModel>()

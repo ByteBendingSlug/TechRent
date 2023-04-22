@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TechRent.Shared.DTOs
 {
@@ -10,7 +6,7 @@ namespace TechRent.Shared.DTOs
     {
         public Guid Id { get; set; }
         public string? ItemName { get; set; }
-        public string? Kategorie { get; set; }
-        public bool Ausleihen { get; set; }
+        public string? Category { get; set; }
+        public bool Rent { get; set; }
     }
 }

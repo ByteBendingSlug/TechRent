@@ -22,6 +22,6 @@ public class FetchAllItems : IFetchAllItems
     {
         using ItemDbContext context = _contextFactory.Create();
         IEnumerable<ItemDTO> itemDTOs = await context.Items.ToListAsync();
-        return itemDTOs.Select(y => new Item(y.Id, y.ItemName ?? "Unknown", y.Kategorie ?? "Unknown", y.Ausleihen));
+        return itemDTOs.Select(y => new Item(y.Id, y.ItemName ?? "Unknown", y.Category ?? "Unknown", y.Rent));
     }
 }

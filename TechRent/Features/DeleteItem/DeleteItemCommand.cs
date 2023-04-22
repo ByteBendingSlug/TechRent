@@ -1,9 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using TechRent.Entities;
 using TechRent.Features.ShowItemListing;
 using TechRent.Shared.Commands;
-using TechRent.Shared.FeatureContracts;
 
 namespace TechRent.Features.DeleteItem
 {

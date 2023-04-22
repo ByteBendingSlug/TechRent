@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 using TechRent.Entities;
 using TechRent.Features.Navigation;
-using TechRent.Features.ShowItemDetail;
 using TechRent.Shared.Commands;
 
 namespace TechRent.Features.AddItem

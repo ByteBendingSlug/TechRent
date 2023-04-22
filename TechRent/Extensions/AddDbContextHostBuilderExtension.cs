@@ -2,12 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Markup;
 using TechRent.Shared.DatabaseContext;
 
 namespace TechRent.Extensions
@@ -16,7 +10,7 @@ namespace TechRent.Extensions
     {
         public static IHostBuilder AddDbContext(this IHostBuilder hostBuilder)
         {
-            _ = hostBuilder.ConfigureServices((context, services) => 
+            _ = hostBuilder.ConfigureServices((context, services) =>
             {
                 string? connectionString = context.Configuration.GetConnectionString("sqlite");
 

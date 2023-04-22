@@ -23,14 +23,14 @@ namespace TechRent.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Ausleihen")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Category")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ItemName")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Kategorie")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("Rent")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

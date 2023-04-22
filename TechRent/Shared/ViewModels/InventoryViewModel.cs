@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using TechRent.Entities;
 using TechRent.Features.AddItem;
 using TechRent.Features.Navigation;
@@ -13,7 +8,7 @@ using TechRent.Features.UpdateItem;
 
 namespace TechRent.Shared.ViewModels
 {
-   public class InventoryViewModel : ViewModelBase
+    public class InventoryViewModel : ViewModelBase
     {
         public ItemListingViewModel ItemListingViewModel { get; }
         public ItemDetailsViewModel ItemDetailsViewModel { get; }
@@ -26,7 +21,7 @@ namespace TechRent.Shared.ViewModels
             ItemListingViewModel = new ItemListingViewModel(itemProxy, selectedItemProxy, dialogNavigationStore);
             ItemDetailsViewModel = new ItemDetailsViewModel(selectedItemProxy);
 
-            LoadItemsCommand = new LoadItemsCommand(this, itemProxy);
+            LoadItemsCommand = new LoadItemsCommand(itemProxy);
             AddItemsCommand = new OpenAddDialogCommand(itemProxy, dialogNavigationStore);
         }
 

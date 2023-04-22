@@ -11,8 +11,8 @@ using TechRent.Shared.DatabaseContext;
 namespace TechRent.Migrations
 {
     [DbContext(typeof(ItemDbContext))]
-    [Migration("20230411193351_MyMigration")]
-    partial class MyMigration
+    [Migration("20230422172345_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,14 +26,14 @@ namespace TechRent.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Ausleihen")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Category")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ItemName")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Kategorie")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("Rent")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

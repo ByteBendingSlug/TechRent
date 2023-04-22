@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using TechRent.Entities;
 using TechRent.Features.Navigation;
-using TechRent.Features.ShowItemDetail;
 using TechRent.Shared.Commands;
 
 namespace TechRent.Features.RentItem
@@ -18,7 +17,7 @@ namespace TechRent.Features.RentItem
             _itemProxy = itemProxy;
             _dialogNavigationProxy = dialogNavigationStore;
         }
-        
+
         public override async Task ExecuteAsync(object? parameter)
         {
             var formViewModel = _rentItemViewModel.ItemDetailsFormViewModel;

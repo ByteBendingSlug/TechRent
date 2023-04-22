@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using TechRent.Entities;
 using TechRent.Features.DeleteItem;
-using TechRent.Features.RentItem;
 using TechRent.Features.Navigation;
+using TechRent.Features.RentItem;
 using TechRent.Shared.ViewModels;
 
 namespace TechRent.Features.ShowItemListing
 {
-   public class ItemListingElementViewModel : ViewModelBase
+    public class ItemListingElementViewModel : ViewModelBase
     {
         public Item Item { get; private set; }
 
@@ -43,7 +38,7 @@ namespace TechRent.Features.ShowItemListing
                 }
             }
         }
-        
+
         public ICommand RentCommand { get; }
         public ICommand DeleteCommand { get; }
 
