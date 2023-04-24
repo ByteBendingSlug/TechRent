@@ -24,11 +24,11 @@ namespace TechRent.Features.ShowItemListing
             set => _selectedItemProxy.SelectedItem = value?.Item;
         }
 
-        public ItemListingViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationStore)
+        public ItemListingViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
             _itemProxy = itemProxy;
             _selectedItemProxy = selectedItemProxy;
-            _dialogNavigationProxy = dialogNavigationStore;
+            _dialogNavigationProxy = dialogNavigationProxy;
             _itemListingElementViewModels = new();
 
             _selectedItemProxy.SelectedItemChanged += SelectedItemChangedInProxy;

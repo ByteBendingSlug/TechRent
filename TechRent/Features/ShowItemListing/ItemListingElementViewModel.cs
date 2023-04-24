@@ -42,11 +42,11 @@ namespace TechRent.Features.ShowItemListing
         public ICommand RentCommand { get; }
         public ICommand DeleteCommand { get; }
 
-        public ItemListingElementViewModel(Item item, ItemProxy itemProxy, DialogNavigationProxy dialogNavigationStore)
+        public ItemListingElementViewModel(Item item, ItemProxy itemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
             Item = item;
 
-            RentCommand = new OpenRentalDialogCommand(this, itemProxy, dialogNavigationStore);
+            RentCommand = new OpenRentalDialogCommand(this, itemProxy, dialogNavigationProxy);
             DeleteCommand = new DeleteItemCommand(this, itemProxy);
         }
 

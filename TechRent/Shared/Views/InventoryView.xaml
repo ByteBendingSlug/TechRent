@@ -6,7 +6,7 @@
              xmlns:component="clr-namespace:TechRent.Shared.Views.Components"
              xmlns:local="clr-namespace:TechRent.Shared.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="650" d:DesignWidth="1200">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -23,7 +23,7 @@
                         AutomationProperties.AutomationId="AddItemButton"
                         Command="{Binding AddItemsCommand}"
                         Content="Add"
-                        FontSize="16" Margin="10,0,680,0" />
+                        FontSize="16" Margin="10,0,630,0" />
         </Grid>
         <Grid Grid.Row="1" Margin="0,20,0,0">
             <Grid.ColumnDefinitions>
@@ -31,11 +31,10 @@
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
 
-            <component:ItemListingView Grid.Column="0" DataContext="{Binding ItemListingViewModel}" />
+            <component:ItemListingView Grid.Column="0" DataContext="{Binding ItemListingViewModel}" Grid.ColumnSpan="2" Margin="0,0,415,0" />
             <component:ItemDetailsView
-                        Grid.Column="1"
-                        Margin="20,0,0,0"
-                        DataContext="{Binding ItemDetailsViewModel}" />
+                        Margin="133,0,10,0"
+                        DataContext="{Binding ItemDetailsViewModel}" RenderTransformOrigin="0.494,0.115" Grid.Column="1" />
         </Grid>
     </Grid>
 </UserControl>

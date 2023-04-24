@@ -4,14 +4,14 @@ namespace TechRent.Features.Navigation
 {
     public class CloseDialogCommand : CommandBase
     {
-        private readonly DialogNavigationProxy _dialogNavigationStore;
-        public CloseDialogCommand(DialogNavigationProxy dialogNavigationStore)
+        private readonly DialogNavigationProxy _dialogNavigationProxy;
+        public CloseDialogCommand(DialogNavigationProxy dialogNavigationProxy)
         {
-            _dialogNavigationStore = dialogNavigationStore;
+            _dialogNavigationProxy = dialogNavigationProxy;
         }
         public override void Execute(object? parameter)
         {
-            _dialogNavigationStore.Close();
+            _dialogNavigationProxy.Close();
         }
     }
 }

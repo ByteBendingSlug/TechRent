@@ -11,11 +11,11 @@ namespace TechRent.Features.RentItem
         private readonly ItemProxy _itemProxy;
         private readonly DialogNavigationProxy _dialogNavigationProxy;
 
-        public RentItemCommand(RentItemViewModel rentItemViewModel, ItemProxy itemProxy, DialogNavigationProxy dialogNavigationStore)
+        public RentItemCommand(RentItemViewModel rentItemViewModel, ItemProxy itemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
             _rentItemViewModel = rentItemViewModel;
             _itemProxy = itemProxy;
-            _dialogNavigationProxy = dialogNavigationStore;
+            _dialogNavigationProxy = dialogNavigationProxy;
         }
 
         public override async Task ExecuteAsync(object? parameter)

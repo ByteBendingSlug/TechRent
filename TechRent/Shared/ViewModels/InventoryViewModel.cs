@@ -16,23 +16,23 @@ namespace TechRent.Shared.ViewModels
         public ICommand LoadItemsCommand { get; }
         public ICommand AddItemsCommand { get; }
 
-        public InventoryViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationStore)
+        public InventoryViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
-            ItemListingViewModel = new ItemListingViewModel(itemProxy, selectedItemProxy, dialogNavigationStore);
+            ItemListingViewModel = new ItemListingViewModel(itemProxy, selectedItemProxy, dialogNavigationProxy);
             ItemDetailsViewModel = new ItemDetailsViewModel(selectedItemProxy);
 
             LoadItemsCommand = new LoadItemsCommand(itemProxy);
-            AddItemsCommand = new OpenAddDialogCommand(itemProxy, dialogNavigationStore);
+            AddItemsCommand = new OpenAddDialogCommand(itemProxy, dialogNavigationProxy);
         }
 
-        public static InventoryViewModel CreateViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationStore)
+        public static InventoryViewModel CreateViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
-            return new InventoryViewModel(itemProxy, selectedItemProxy, dialogNavigationStore);
+            return new InventoryViewModel(itemProxy, selectedItemProxy, dialogNavigationProxy);
         }
 
-        public static InventoryViewModel LoadViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationStore)
+        public static InventoryViewModel LoadViewModel(ItemProxy itemProxy, SelectedItemProxy selectedItemProxy, DialogNavigationProxy dialogNavigationProxy)
         {
-            InventoryViewModel viewModel = new InventoryViewModel(itemProxy, selectedItemProxy, dialogNavigationStore);
+            InventoryViewModel viewModel = new InventoryViewModel(itemProxy, selectedItemProxy, dialogNavigationProxy);
 
             viewModel.LoadItemsCommand.Execute(null);
 

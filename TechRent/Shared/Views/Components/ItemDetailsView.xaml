@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border
-            Padding="10"
+            Margin="10"
+            Padding="5"
             BorderThickness="1"
-            CornerRadius="5"
-            SnapsToDevicePixels="True">
+            BorderBrush="Black">
             <Grid>
                 <Grid Grid.IsSharedSizeScope="True">
                     <Grid.Style>
